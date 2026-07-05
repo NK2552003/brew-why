@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
   <h1>🍺 brew-why</h1>
   <p><strong>A beautiful, fast CLI to explain why your Homebrew dependencies are installed and figure out what is safe to remove.</strong></p>
@@ -106,3 +107,6 @@ Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
 
 ## 📝 License
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+=======
+# brew-why
+>>>>>>> 64508567a8cb460219dcddddd3ab6eb7279cf395
