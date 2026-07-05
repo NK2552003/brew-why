@@ -7,6 +7,11 @@
     <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
     <img src="https://img.shields.io/badge/maintained-yes-brightgreen.svg" alt="Maintained">
   </p>
+  
+  <br>
+  
+![brew-why demo](https://github.com/NK2552003/Big-Data-Survival-Guide/blob/main/media/brew-why.gif?raw=true)
+
 </div>
 
 ---
@@ -21,8 +26,9 @@ Over the years, you've run `brew install x` dozens of times. Your Mac is getting
 ---
 
 ## Features
-- **Overview Tables:** See exactly which packages you installed vs. which were pulled in as dependencies.
-- ** Orphan Detection:** Identifies packages that are completely safe to remove and calculates exactly how much disk space you will recover.
+- ** Overview Tables:** See exactly which packages you installed vs. which were pulled in as dependencies.
+- ** Orphan Detection & Tidy:** Identifies packages that are completely safe to remove and offers an interactive `tidy` wizard to clean them up and run `brew cleanup`.
+- ** System Stats:** Instantly view the overall health, package count, and disk space usage of your Homebrew environment.
 - ** Heaviest Packages:** Instantly rank the largest packages in your Homebrew Cellar.
 - ** Reverse Trees:** See exactly what depends on a specific package using visual graphs.
 - ** Security Audits:** Automatically highlights outdated packages that need a `brew upgrade`.
@@ -89,6 +95,18 @@ brew-why reverse-tree <package_name>
 List all user-installed packages (and their dependencies) that are currently outdated:
 ```bash
 brew-why audit
+```
+
+### 7. System Stats
+Get a beautiful statistical breakdown of your total packages, disk usage, and potential savings:
+```bash
+brew-why stats
+```
+
+### 8. Interactive Cleanup (Tidy)
+Launch an interactive wizard to safely remove orphaned packages and clean up old Homebrew caches:
+```bash
+brew-why tidy
 ```
 
 ---
