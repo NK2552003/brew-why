@@ -184,3 +184,24 @@ def show_reverse_tree(pkg: str, rev_graph: Dict[str, List[str]]) -> None:
         _build_rich_tree(u, rev_graph, branch, {pkg})
         
     console.print(root)
+
+def show_stats(users: List[Dict], deps: List[Dict], orphans: List[Dict]) -> None:
+    total_pkgs = len(users) + len(deps) + len(orphans)
+    total_size = sum(p.get('size', 0) for p in users + deps + orphans)
+    orphan_size = sum(p.get('size', 0) for p in orphans)
+    outdated = sum(1 for p in users + deps + orphans if p.get('outdated'))
+
+    table = Table(title="Homebrew Statistics", title_style="bold magenta", show_header=False)
+    table.add_column("Metric", style="cyan")
+    table.add_column("Value", justify="right", style="bold yellow")
+    
+    table.add_row("Total Packages", str(total_pkgs))
+    table.add_row("User Installed", str(len(users)))
+    table.add_row("Dependencies", str(len(deps)))
+    table.add_row("Orphans (Safe to remove)", str(len(orphans)))
+    table.add_row("Outdated Packages", str(outdated))
+    table.add_row("Total Disk Usage", format_size(total_size))
+    table.add_row("Potential Space Savings", format_size(orphan_size))
+
+    console.print(table)
+

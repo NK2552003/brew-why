@@ -7,8 +7,8 @@ from textual.containers import Container, Vertical, Horizontal
 from textual.screen import ModalScreen
 from textual import on, work
 
-from brew_why import core
-from brew_why import display
+from brew_why.core import data, cache
+from brew_why.ui import display
 
 class PackageDetailScreen(ModalScreen):
     """A modal screen that displays details for a single package."""
@@ -129,7 +129,7 @@ class Dashboard(Static):
         self.app.call_from_thread(lambda: setattr(search_input, 'disabled', True))
         
         try:
-            users, deps, orphans = core.get_all_data()
+            users, deps, orphans = data.get_all_data()
             
             for u in users:
                 u['_category'] = "User"
@@ -249,6 +249,6 @@ class BrewWhyApp(App):
         
     def action_refresh(self) -> None:
         """Action to clear cache and refresh data."""
-        core.clear_cache()
+        cache.clear_cache()
         dash = self.query_one(Dashboard)
         dash.run_worker(dash.load_data(), thread=True)
