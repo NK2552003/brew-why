@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brew-why"
+version = "1.0.6"
+description = "A beautiful CLI to explain Homebrew dependencies."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+]
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.7.0",
+    "textual>=0.50.0"
+]
+
+[project.scripts]
+brew-why = "brew_why.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["brew_why"]
