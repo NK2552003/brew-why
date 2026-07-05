@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div align="center">
   <h1>🍺 brew-why</h1>
   <p><strong>A beautiful, fast CLI to explain why your Homebrew dependencies are installed and figure out what is safe to remove.</strong></p>
@@ -12,26 +11,26 @@
 
 ---
 
-## 🤔 The Problem
+## The Problem
 Over the years, you've run `brew install x` dozens of times. Your Mac is getting full, and when you type `brew list`, you see hundreds of packages like `icu4c`, `pcre2`, or `libvmaf`. 
 *Why are they there? Are they safe to delete? How much space are they taking?*
 
-## 💡 The Solution
+## The Solution
 `brew-why` parses your entire Homebrew dependency graph and presents it in a beautiful, human-readable terminal UI. It categorizes your packages, highlights orphans, audits for security updates, and provides a full interactive dashboard to manage your system.
 
 ---
 
-## ✨ Features
-- **📊 Overview Tables:** See exactly which packages you installed vs. which were pulled in as dependencies.
-- **🧹 Orphan Detection:** Identifies packages that are completely safe to remove and calculates exactly how much disk space you will recover.
-- **🏋️ Heaviest Packages:** Instantly rank the largest packages in your Homebrew Cellar.
-- **🌳 Reverse Trees:** See exactly what depends on a specific package using visual graphs.
-- **🛡️ Security Audits:** Automatically highlights outdated packages that need a `brew upgrade`.
-- **💻 Interactive Dashboard:** A full-screen, responsive Textual TUI to browse your environment.
+## Features
+- **Overview Tables:** See exactly which packages you installed vs. which were pulled in as dependencies.
+- ** Orphan Detection:** Identifies packages that are completely safe to remove and calculates exactly how much disk space you will recover.
+- ** Heaviest Packages:** Instantly rank the largest packages in your Homebrew Cellar.
+- ** Reverse Trees:** See exactly what depends on a specific package using visual graphs.
+- ** Security Audits:** Automatically highlights outdated packages that need a `brew upgrade`.
+- ** Interactive Dashboard:** A full-screen, responsive Textual TUI to browse your environment.
 
 ---
 
-## 🚀 Installation
+## Installation
 
 The recommended way to install `brew-why` is using `pipx` (to keep the dependencies isolated from your system Python).
 
@@ -53,7 +52,7 @@ cd brew-why
 
 ---
 
-## 📚 Usage
+## Usage
 
 ### 1. The Interactive Dashboard (Recommended)
 Launch the full-screen interactive Textual interface:
@@ -94,19 +93,16 @@ brew-why audit
 
 ---
 
-## 🛠️ Built With
+## Built With
 - **[Typer](https://typer.tiangolo.com/):** For robust, typed CLI routing.
 - **[Rich](https://rich.readthedocs.io/):** For beautiful console rendering (tables, panels, spinners).
 - **[Textual](https://textual.textualize.io/):** For the interactive TUI dashboard.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
 
-## 📝 License
+## License
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
-=======
-# brew-why
->>>>>>> 64508567a8cb460219dcddddd3ab6eb7279cf395
