@@ -4,7 +4,7 @@
   
   <p>
     <img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="Python Version">
-    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
+    <img src="https://img.shields.io/badge/License-Apache%202.0-green.svg" alt="License">
     <img src="https://img.shields.io/badge/maintained-yes-brightgreen.svg" alt="Maintained">
   </p>
   
@@ -123,4 +123,4 @@ Contributions are what make the open source community such an amazing place to l
 Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
 
 ## License
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+Distributed under the Apache License 2.0. See [LICENSE](LICENSE) for more information.
