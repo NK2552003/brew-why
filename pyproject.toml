@@ -28,4 +28,3 @@ brew-why = "brew_why.cli.app:app"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-packages = ["brew_why"]
